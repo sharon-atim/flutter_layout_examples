@@ -24,78 +24,127 @@ class HomePage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    RowButton1(),
-                    RowButton1(),
-                    RowButton1(),
-                    RowButton1(),
-                    RowButton1(),
-                  ],
-                ),
+                child: Row1(),
               ),
               const SizedBox(),
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Text('Axis size and alignment'),
-              ),
+              RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    RowButton2(),
-                    RowButton2(),
-                    RowButton2(),
-                    RowButton2(),
-                    RowButton2(),
-                  ],
-                ),
+                child: Row2(),
               ),
               const SizedBox(),
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Text('AxisAlignment'),
-              ),
+              RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    RowButton3(),
-                    RowButton3(),
-                    RowButton3(),
-                    RowButton3(),
-                    RowButton3(),
-                  ],
-                ),
+                child: Row3(),
               ),
               const SizedBox(),
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text('Flexible Widget'),
-              ),
+              RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    RowButton4(),
-                    RowButton4(),
-                    RowButton4(),
-                    RowButton4(),
-                    RowButton4(),
-                  ],
-                ),
+                child: Row4(),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class RowPadding extends StatelessWidget {
+  const RowPadding({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Padding(
+      padding: EdgeInsets.all(20.0),
+      child: Text('Axis size and alignment'),
+    );
+  }
+}
+
+class Row4 extends StatelessWidget {
+  const Row4({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: const [
+        RowButton4(),
+        RowButton4(),
+        RowButton4(),
+        RowButton4(),
+        RowButton4(),
+      ],
+    );
+  }
+}
+
+class Row3 extends StatelessWidget {
+  const Row3({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: const [
+        RowButton3(),
+        RowButton3(),
+        RowButton3(),
+        RowButton3(),
+        RowButton3(),
+      ],
+    );
+  }
+}
+
+class Row2 extends StatelessWidget {
+  const Row2({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: const [
+        RowButton2(),
+        RowButton2(),
+        RowButton2(),
+        RowButton2(),
+        RowButton2(),
+      ],
+    );
+  }
+}
+
+class Row1 extends StatelessWidget {
+  const Row1({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: const [
+        RowButton1(),
+        RowButton1(),
+        RowButton1(),
+        RowButton1(),
+        RowButton1(),
+      ],
     );
   }
 }
