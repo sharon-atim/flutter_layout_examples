@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  final String title = 'Layout Playground';
+  final String title = 'Flutter Layouts';
 
   @override
   Widget build(BuildContext context) {
@@ -11,41 +11,45 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
         backgroundColor: Colors.deepPurpleAccent,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: <Color>[Colors.blue, Colors.lightBlueAccent])),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.white,
           child: Column(
             children: <Widget>[
-              const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Text('Rows and Columns'),
-              ),
+              const RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: Row1(),
+                child: const Row1(),
               ),
               const SizedBox(),
-              RowPadding(),
+              const RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: Row2(),
+                child: const Row2(),
               ),
               const SizedBox(),
-              RowPadding(),
+              const RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: Row3(),
+                child: const Row3(),
               ),
               const SizedBox(),
-              RowPadding(),
+              const RowPadding(),
               Container(
                 margin: const EdgeInsets.symmetric(),
                 height: 130,
-                child: Row4(),
+                child: const Row4(),
               ),
             ],
           ),
@@ -63,8 +67,8 @@ class RowPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(20.0),
-      child: Text('Axis size and alignment'),
+      padding: EdgeInsets.only(top: 15, bottom: 15),
+      child: Text('Title of concept'),
     );
   }
 }
@@ -177,7 +181,7 @@ class RowButton1 extends StatelessWidget {
                             maxWidth: 300.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: const Text(
-                          "Login",
+                          "Text",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ))))));
@@ -212,7 +216,7 @@ class RowButton2 extends StatelessWidget {
                             maxWidth: 300.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: const Text(
-                          "Login",
+                          "Text2",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ))))));
@@ -247,7 +251,7 @@ class RowButton3 extends StatelessWidget {
                             maxWidth: 300.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: const Text(
-                          "Login",
+                          "Text",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ))))));
@@ -282,7 +286,7 @@ class RowButton4 extends StatelessWidget {
                             maxWidth: 300.0, minHeight: 50.0),
                         alignment: Alignment.center,
                         child: const Text(
-                          "Login",
+                          "Text",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white),
                         ))))));
